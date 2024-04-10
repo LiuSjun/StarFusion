@@ -1,0 +1,31 @@
+{
+  "name": "SPSR"
+  , "model": "spsr"
+  , "scale": 4
+  , "gpu_ids": [0]
+
+  , "datasets": {
+    "test_1": { 
+      "name": "set5"
+      , "mode": "LR"
+      , "dataroot_LR": "D:\\SuperResolution\\SPSR-master\\code\\data\\Test_Remote"
+    }
+  }
+  , "path": {
+    "root": "D:\\SuperResolution\\SPSR-master\\code\\cya_BasicSR\\release"
+    , "pretrain_model_G": "D:\\SuperResolution\\SPSR-master\\code\\cya_BasicSR\\release\\experiments\\SPSR\\models\\22000_G.pth"
+  }
+
+  , "network_G": {
+    "which_model_G": "spsr_net"
+    , "norm_type": null
+    , "mode": "CNA"
+    , "nf": 64
+    , "nb": 23
+    , "in_nc": 3
+    , "out_nc": 3
+
+    , "gc": 32
+    , "group": 1
+  }
+}
